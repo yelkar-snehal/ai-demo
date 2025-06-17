@@ -36,3 +36,23 @@ Construct Prompt:
 Send to LLM (e.g., GPT-3.5 / 4)
    ↓
 LLM Generates Answer Using Both
+```
+
+## ✅ 3. Semantic Search with Embeddings
+
+- Embed a list of document snippets
+- Embed a user query
+- Find the top-matching document using cosine similarity
+
+This demonstrates the **retriever** logic of RAG in isolation.
+
+- We use a **list comprehension** to embed all documents:
+  ```python
+  [get_embedding(doc) for doc in documents]
+  ```
+
+Key functions:
+- `get_embedding()` – returns vector for any text
+- `cosine_similarity()` – measures meaning distance between two texts
+- `find_most_similar()` – finds the top match from a list
+- `argmax()` - returns the index of the highest ele in the list, for topK comparison
