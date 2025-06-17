@@ -1,0 +1,7 @@
+# Ignore venv and environment-specific files
+.ai-demo/
+.env
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
